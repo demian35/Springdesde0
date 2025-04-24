@@ -1,4 +1,5 @@
-package com.practica1.spring.practica1.sprinboot_applications.Anotaciones;
+package com.practica1.spring.practica1.sprinboot_applications;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -16,8 +17,6 @@ public class ClaseMain {
     //metodo que se ejecutara cuando se cree el bean y mostrara los beans creados
     @PostConstruct
     public void init(){
-        for(String s :ap.getBeanDefinitionNames()){
-            System.out.println(">>>" + s);
-        }
+        System.out.println("algo");
     }
 }
