@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 public class DBQuery implements Query {
 
     @Override
-    public List<
+    public List<String> muestraResultados(){
+        return List.of("Datos", "de", "la" ,"base","de","datos");
+    }
     
 }
