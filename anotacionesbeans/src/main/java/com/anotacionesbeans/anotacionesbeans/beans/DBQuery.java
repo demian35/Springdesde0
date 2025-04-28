@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 /*Bean primary para especificar cual es el bean principal */
-@Primary
+
 @Component
 public class DBQuery implements Query {
 
