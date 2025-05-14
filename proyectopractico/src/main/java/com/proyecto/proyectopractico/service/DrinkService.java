@@ -24,8 +24,13 @@ public class DrinkService {
     }
 
     //obtenemos un nuevo trago por su id
-    public Optional getDrinkbyID(Long id){
+    public Optional<Drink> getDrinkbyID(Long id){
         return drinkrepository.findById(id);
+    }
+
+    //metodo para buscar un trago por nombre
+    public List<Drink> searchDrinkbyName(String name){
+        return drinkrepository.findByNameContainingIgnoreCase(name);
     }
 
     //guardamos un trago nuevo
