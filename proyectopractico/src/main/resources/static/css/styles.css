@@ -1,0 +1,36 @@
+body {
+    background-color: #1C1C1C;
+    color: white;
+}
+
+.card {
+    background-color: #2E2E2E;
+    border: none;
+    border-radius: 1rem;
+}
+
+.btn-primary {
+    background-color: #DAA520;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #c4911a;
+}
+
+.btn-secondary {
+    background-color: #8FBC8F;
+    border: none;
+    color: black;
+}
+
+.btn-secondary:hover {
+    background-color: #7cab7c;
+}
+
+.form-control {
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
