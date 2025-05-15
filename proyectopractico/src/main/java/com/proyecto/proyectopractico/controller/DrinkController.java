@@ -10,6 +10,7 @@ import com.proyecto.proyectopractico.model.Drink;
 import com.proyecto.proyectopractico.service.DrinkService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
@@ -28,7 +29,7 @@ public class DrinkController {
     }
 
     //endpoint para agregar bebidas
-    @GetMapping("/add")
+    @PostMapping("/add")
     public String addDrink(@ModelAttribute Drink drink) {
         drinkService.saveDrink(drink);
         return "redirect:/";//al agregar redirige al inicio 
