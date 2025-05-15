@@ -16,7 +16,8 @@ public class Drink {
 
     private String name;
     private String description;
-    private String image; //guardara la url de la imagen del trago}
+    private String image; //guardara la url de la imagen del trago
+    private String ingredients; //ingredientes para preparar la bebida
 
     public Drink(){}//Constructor sin argumentos
 
@@ -24,6 +25,7 @@ public class Drink {
         this.name=name;
         this.description=description;
         this.image=image;
+        this.ingredients=ingredients;
     }
 
     //metodos get y set
@@ -58,6 +60,14 @@ public class Drink {
 
     public void setImage(String image){
         this.image=image;
+    }
+
+    public String getIngredients(){
+        return ingredients;
+    }
+
+    public void setIngredients(String ingredients){
+        this.ingredients=ingredients;
     }
 
 }
