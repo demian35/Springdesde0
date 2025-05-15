@@ -21,7 +21,7 @@ public class Drink {
 
     public Drink(){}//Constructor sin argumentos
 
-    public Drink(String name,String description,String image){//constructor con argumentos
+    public Drink(String name,String description,String image,String ingredients){//constructor con argumentos
         this.name=name;
         this.description=description;
         this.image=image;
