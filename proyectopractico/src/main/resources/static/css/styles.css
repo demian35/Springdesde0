@@ -7,6 +7,14 @@ body {
     background-color: #2E2E2E;
     border: none;
     border-radius: 1rem;
+    color: white;
+}
+
+.card .card-title,
+.card .card-text,
+.card p,
+.card span {
+    color: white !important; /* Por si acaso algunos elementos no heredan correctamente */
 }
 
 .btn-primary {
