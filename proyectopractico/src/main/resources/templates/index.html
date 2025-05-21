@@ -36,6 +36,11 @@
                             <p><strong>Ingredientes:</strong> <span th:text="${drink.ingredients}">Ingredientes</span>
                             </p>
                         </div>
+                        <form th:action="@{/delete}" method="post" class="mt-3">
+                            <input type="hidden" name="idBebida" th:value="${drink.idBebida}" />
+                            <button type="submit" class="btn btn-danger w-100">Eliminar</button>
+                        </form>
+
                     </div>
                 </div>
             </div>
