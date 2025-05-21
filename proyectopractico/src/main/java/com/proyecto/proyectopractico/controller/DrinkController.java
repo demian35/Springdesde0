@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 
 import com.proyecto.proyectopractico.model.Drink;
 import com.proyecto.proyectopractico.service.DrinkService;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,6 +35,12 @@ public class DrinkController {
     public String addDrink(@ModelAttribute Drink drink) {
         drinkService.saveDrink(drink);
         return "redirect:/";//al agregar redirige al inicio 
+    }
+
+    @PostMapping("/delete")
+    public String delDrink(@RequestParam("idBebida") Long idBebida){
+        drinkService.deleteDrink(idBebida);
+        return "redirect:/";
     }
 
     //endpoint para realizar la busqueda de una bebida
