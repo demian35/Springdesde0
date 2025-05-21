@@ -12,6 +12,12 @@
     <div class="container my-4">
         <h1 class="text-center mb-4">Catálogo de Bebidas</h1>
 
+        <div class="text-center mb-4">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregarModal">
+                + Agregar nueva bebida
+            </button>
+        </div>
+
         <!-- Aquí puedes agregar el formulario de búsqueda -->
         <form action="/buscar" method="get" class="d-flex justify-content-center mb-4">
             <input type="text" name="nombre" class="form-control w-50 me-2" placeholder="Buscar trago por nombre...">
@@ -36,6 +42,44 @@
             <!-- Repite con más bebidas -->
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="agregarModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="agregarModalLabel">Agregar nueva bebida</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <form th:action="@{/add}" th:object="${drink}" method="post">
+                        <div class="mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" th:field="*{name}" class="form-control" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Descripción</label>
+                            <textarea th:field="*{description}" class="form-control" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Ingredientes</label>
+                            <textarea th:field="*{ingredients}" class="form-control" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">URL de Imagen</label>
+                            <input type="text" th:field="*{image}" class="form-control" required />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Guardar bebida</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

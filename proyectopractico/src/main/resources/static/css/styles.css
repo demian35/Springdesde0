@@ -31,6 +31,18 @@ body {
 .form-control {
     background-color: #333;
     color: white;
-    border: none;
+    border: 1px solid #555;
 }
 
+.modal-content {
+    background-color: #2E2E2E;
+    color: white;
+}
+
+.modal-content .form-label {
+    color: white;
+}
+
+.form-control::placeholder {
+    color: #bbb;
+}
