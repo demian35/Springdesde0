@@ -30,11 +30,11 @@ public class Drink {
 
     //metodos get y set
 
-    public Long getID(){
+    public Long getIdBebida(){
         return idBebida;
     }
 
-    public void setID(Long idBebida){
+    public void setIdBebida(Long idBebida){
         this.idBebida=idBebida;
     }
 
