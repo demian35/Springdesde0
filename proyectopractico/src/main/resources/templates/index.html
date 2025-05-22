@@ -19,8 +19,8 @@
         </div>
 
         <!-- Aquí puedes agregar el formulario de búsqueda -->
-        <form action="/buscar" method="get" class="d-flex justify-content-center mb-4">
-            <input type="text" name="nombre" class="form-control w-50 me-2" placeholder="Buscar trago por nombre...">
+        <form th:action="@{/search}" method="get" class="d-flex justify-content-center mb-4">
+            <input type="text" name="name" class="form-control w-50 me-2" placeholder="Buscar trago por nombre...">
             <button type="submit" class="btn btn-primary">Buscar</button>
         </form>
 
